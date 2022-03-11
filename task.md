@@ -5,3 +5,8 @@
 5. Add a button with a reference to it
 6. Add increment functionality to the button
 7. Make it say 'Good Job!' when you reach 10
+
+Extra
+
+- String Litterals
+- Separate Types File

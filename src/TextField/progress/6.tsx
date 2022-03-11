@@ -19,6 +19,8 @@ const TextField: React.FC<Props> = ({ user, specialGreeting }) => {
 
   const buttonRef = useRef<HTMLButtonElement>(null);
 
+  const displayUser = (user: UserInfo) => `${user.name} - ${user.age}`;
+
   const handleClick: handleClickType = (e) => {
     e.preventDefault();
 
@@ -28,9 +30,7 @@ const TextField: React.FC<Props> = ({ user, specialGreeting }) => {
   return (
     <div>
       <p>{specialGreeting || "Hello!"}</p>
-      <p>
-        {user.name} - {user.age}
-      </p>
+      <p>{displayUser(user)}</p>
       <button ref={buttonRef} onClick={handleClick}>
         +
       </button>

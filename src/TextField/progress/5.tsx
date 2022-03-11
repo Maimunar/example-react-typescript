@@ -13,12 +13,12 @@ interface Props {
 const TextField: React.FC<Props> = ({ user, specialGreeting }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
+  const displayUser = (user: UserInfo) => `${user.name} - ${user.age}`;
+
   return (
     <div>
       <p>{specialGreeting || "Hello!"}</p>
-      <p>
-        {user.name} - {user.age}
-      </p>
+      <p>{displayUser(user)}</p>
       <button ref={buttonRef}>+</button>
     </div>
   );
