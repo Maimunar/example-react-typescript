@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { Props, UserInfo, handleClickType } from "./types";
 
 const TextField: React.FC<Props> = ({ user, specialGreeting }) => {
-  const [count, setCount] = useState<number | string>(5);
+  const [count, setCount] = useState<number | "Good Job!">(5);
 
   const buttonRef = useRef<HTMLButtonElement>(null);
 
